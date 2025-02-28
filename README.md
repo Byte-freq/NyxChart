@@ -1,70 +1,105 @@
-# Getting Started with Create React App
+NyxChart 📈
+NyxChart is a powerful and customizable charting library built for tracking cryptocurrency sentiment, whale activity, and market trends. It provides real-time data visualization with a focus on historical trends and AI-driven sentiment analysis.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+✨ Features
+📊 Real-time & Historical Sentiment Tracking – Visualize how the market feels about different cryptocurrencies over time.
+🐋 Whale Activity Detection – Identify and analyze large transactions on the blockchain.
+📈 Technical Analysis Tools – Includes moving averages, RSI, and other key indicators.
+🎨 Customizable & Aesthetic UI – Smooth, interactive charts with a dark-mode theme.
+🤖 AI-Powered Sentiment Analysis – Uses AI to process social media/news sentiment.
+⚡ Lightweight & Fast – Optimized for performance while handling large datasets.
+🚀 Installation
+Step 1: Clone the NyxChart Repository
+If you're using this in another project, clone your GitHub repo (or copy the folder manually):
 
-## Available Scripts
+sh
+git clone https://github.com/Byte-freq/NyxChart.git
+Then navigate into the project:
 
-In the project directory, you can run:
+sh
+cd NyxChart
+Step 2: Link NyxChart to Your React Project
+Since NyxChart isn’t on npm yet, you have two options:
 
-### `npm start`
+Option 1: Use npm link (Best for Development)
+Inside the NyxChart directory, run:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+sh
+Copy
+Edit
+npm link
+This creates a symbolic link for local development.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Inside your React project directory, run:
 
-### `npm test`
+sh
+Copy
+Edit
+npm link nyx-chart
+Now, your project treats nyx-chart as if it were installed from npm.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Option 2: Install Locally with a File Path
+Instead of using npm, you can install NyxChart from your local directory:
 
-### `npm run build`
+sh
+npm install ../path/to/NyxChart
+or if using yarn:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+sh
+yarn add file:../path/to/NyxChart
+Replace ../path/to/NyxChart with the actual relative path to the folder.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Basic Example
+jsx
+import React from "react";
+import NyxChart from "nyx-chart";
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+const MyComponent = () => {
+  return (
+    <div>
+      <h2>Crypto Sentiment Chart</h2>
+      <NyxChart crypto="bitcoin" timeframe="1d" />
+    </div>
+  );
+};
 
-### `npm run eject`
+export default MyComponent;
+Props
+Prop	Type	Description
+crypto	string	Cryptocurrency symbol (e.g., "bitcoin", "ethereum")
+timeframe	string	Time interval ("1h", "1d", "1w", "1m")
+theme	string	Chart theme ("dark", "light")
+📖 Advanced Configuration
+NyxChart supports additional customization options such as:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Changing the chart type (candlestick, line, bar, etc.)
+Adding multiple datasets for comparison
+Adjusting AI sensitivity for sentiment predictions
+jsx
+Copy
+Edit
+<NyxChart 
+  crypto="ethereum" 
+  timeframe="1h" 
+  theme="dark"
+  showTechnicalIndicators={true}
+/>
+📡 Data Sources
+NyxChart pulls real-time and historical data from:
+✅ Social Media Sentiment (Twitter, Reddit, etc.)
+✅ On-Chain Whale Transactions
+✅ Technical Analysis Indicators
+✅ Crypto Market Data APIs
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+🛠️ Development & Contribution
+Want to contribute? Clone the repo and start coding!
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+sh
+git clone https://github.com/Byte-freq/nyxchart.git
+cd nyxchart
+npm install
+npm start
+💬 Community & Support
+Report issues or request features: [GitHub Issues]
+📜 License
+NyxChart is open-source under the MIT License.
