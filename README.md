@@ -1,12 +1,12 @@
 NyxChart 📈
 NyxChart is a powerful and customizable charting library built for tracking cryptocurrency sentiment, whale activity, and market trends. It provides real-time data visualization with a focus on historical trends and AI-driven sentiment analysis.
 
+![image](https://github.com/user-attachments/assets/f03e0e99-aedc-47ed-adfa-1cd257cd3191)
+
+
 ✨ Features
-📊 Real-time & Historical Sentiment Tracking – Visualize how the market feels about different cryptocurrencies over time.
-🐋 Whale Activity Detection – Identify and analyze large transactions on the blockchain.
 📈 Technical Analysis Tools – Includes moving averages, RSI, and other key indicators.
 🎨 Customizable & Aesthetic UI – Smooth, interactive charts with a dark-mode theme.
-🤖 AI-Powered Sentiment Analysis – Uses AI to process social media/news sentiment.
 ⚡ Lightweight & Fast – Optimized for performance while handling large datasets.
 🚀 Installation
 Step 1: Clone the NyxChart Repository
